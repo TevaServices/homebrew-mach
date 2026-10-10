@@ -12,34 +12,34 @@
 #
 # Placeholders (substituted, kept off a templating DSL on purpose: brew
 # formulas are Ruby, {{ }} would collide):
-#   0.13.5            the release version (no leading v)
-#   v0.13.5          the release tag (v-prefixed)
-#   6fbdc64414d4c74254883294189f0323082baabfb4d60e8963aa05334c19ec75  37eb50e909a2953c828cb146c8a7ca8e483a7b4620989a4cba1e81c53e94b4a1  c1568087f31251e6bb53409b531588c5eebe9486132677d060e6d628e7813ccd  992e93f1ae2d9cadb68321e10784289af32b70eeaa40b78b2dd04086ae4981bb
+#   0.13.6            the release version (no leading v)
+#   v0.13.6          the release tag (v-prefixed)
+#   9cf7c3558830eb4467f710248f6068ee07d6102e1934da435cf773fc2cba69e6  0476bc3ee5fd92d341cae086be2b6c69d5021eb284d81cfc39f89f0f89a7c0dc  4bfdb515853c6ffb2fde2746b27fee19c8bed5144d8167cdd3abe157c620bf7a  519b4cdc3c156356a7c7e49f6793f104ea182346d477961ae058713462059adf
 class Mach < Formula
   desc "mach agent — outbound-only remote access daemon (remote CLI access to enrolled machines)"
   homepage "https://github.com/TevaServices/mach"
-  version "0.13.5"
+  version "0.13.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TevaServices/mach/releases/download/v0.13.5/mach_0.13.5_darwin_amd64.zip"
-      sha256 "c1568087f31251e6bb53409b531588c5eebe9486132677d060e6d628e7813ccd"
+      url "https://github.com/TevaServices/mach/releases/download/v0.13.6/mach_0.13.6_darwin_amd64.zip"
+      sha256 "4bfdb515853c6ffb2fde2746b27fee19c8bed5144d8167cdd3abe157c620bf7a"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TevaServices/mach/releases/download/v0.13.5/mach_0.13.5_darwin_arm64.zip"
-      sha256 "992e93f1ae2d9cadb68321e10784289af32b70eeaa40b78b2dd04086ae4981bb"
+      url "https://github.com/TevaServices/mach/releases/download/v0.13.6/mach_0.13.6_darwin_arm64.zip"
+      sha256 "519b4cdc3c156356a7c7e49f6793f104ea182346d477961ae058713462059adf"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TevaServices/mach/releases/download/v0.13.5/mach_0.13.5_linux_amd64.zip"
-      sha256 "6fbdc64414d4c74254883294189f0323082baabfb4d60e8963aa05334c19ec75"
+      url "https://github.com/TevaServices/mach/releases/download/v0.13.6/mach_0.13.6_linux_amd64.zip"
+      sha256 "9cf7c3558830eb4467f710248f6068ee07d6102e1934da435cf773fc2cba69e6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TevaServices/mach/releases/download/v0.13.5/mach_0.13.5_linux_arm64.zip"
-      sha256 "37eb50e909a2953c828cb146c8a7ca8e483a7b4620989a4cba1e81c53e94b4a1"
+      url "https://github.com/TevaServices/mach/releases/download/v0.13.6/mach_0.13.6_linux_arm64.zip"
+      sha256 "0476bc3ee5fd92d341cae086be2b6c69d5021eb284d81cfc39f89f0f89a7c0dc"
     end
   end
 
